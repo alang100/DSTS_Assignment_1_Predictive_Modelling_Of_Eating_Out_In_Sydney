@@ -63,5 +63,5 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
  b. Results of the (regression and classification) trained models on the test data. These results need to be listed into two tables: one for the regression and another for the classification.  
  c. The list of the commands that you have used to deploy your source code to the GitLab repository.  
  d. The list of the commands that you have used to create and to push the Docker image to the Docker Hub.  
- e. The Link of the source code you have deployed on the GitLab (please add me as a collaborator, my Gitlab account is radwanebrahim@gmail.com)  
+ e. The Link of the source code you have deployed on the GitLab.
  f. The Link of the Docker image you have deployed on the Docker Hub.  
