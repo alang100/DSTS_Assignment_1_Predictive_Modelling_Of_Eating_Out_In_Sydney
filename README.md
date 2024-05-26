@@ -5,7 +5,7 @@ Included in this repository are the following:
 2. DSTS Assignment 1 Jupyter Notebook.
 
 
-A summary of this assignment instructions and its deliverables is as follows:
+A summary of this assignment's instructions and its deliverables is as follows:
 
 ### Part A – Importing and Understanding Data  
 **1 - Provide plots/graphs to support:**
