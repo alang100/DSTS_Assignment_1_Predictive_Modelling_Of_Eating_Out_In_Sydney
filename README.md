@@ -1,9 +1,10 @@
-## DSTS Assignment 1 Predictive Modellin Of Eating Out In Sydney
+## DSTS Assignment 1 Predictive Modelling Of Eating Out In Sydney
 
 Included in this repository are the following:
 1. DSTS Assignment 1 PDF file.
 2. DSTS Assignment 1 Jupyter Notebook.
 
+This project was coded using Python.
 
 A summary of this assignment's instructions and its deliverables is as follows:
 
