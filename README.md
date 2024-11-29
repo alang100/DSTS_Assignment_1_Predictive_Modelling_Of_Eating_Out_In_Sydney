@@ -92,8 +92,6 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
 #### Hyperparameter Tuning:
 - Randomized search and cross-validation (10-fold repeated three times) were used to optimize the SGD models.
 
----
-
 #### Main Findings:
 - **Linear Regression** outperformed all other models, achieving the lowest MSE and MAE while having the highest R² score.
 - Stochastic Gradient Descent models showed similar performance to Linear Regression but did not surpass it, even after hyperparameter tuning.
