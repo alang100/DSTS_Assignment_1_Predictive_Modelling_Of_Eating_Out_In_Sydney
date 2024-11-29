@@ -1,4 +1,4 @@
-## DSTS Assignment 1 Predictive Modelling Of Eating Out In Sydney
+# Data Science and Tech Systems Assignment 1: Predictive Modelling of Eating Out In Sydney
 
 Included in this repository are the following:
 1. DSTS Assignment 1 PDF file.
@@ -6,7 +6,9 @@ Included in this repository are the following:
 
 This project was coded using Python.
 
-A summary of this assignment's instructions and its deliverables is as follows:
+This assignment's instructions and deliverables and a summary of the main outcomes are provided here:
+
+## Assignment Instructions and Deliverables
 
 ### Part A – Importing and Understanding Data  
 **1 - Provide plots/graphs to support:**
@@ -67,3 +69,49 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
  d. The list of the commands that you have used to create and to push the Docker image to the Docker Hub.  
  e. The Link of the source code you have deployed on the GitLab.
  f. The Link of the Docker image you have deployed on the Docker Hub.  
+
+## Project Summary and Main Outcomes
+
+### Key Steps:
+
+#### Data Cleaning and Preprocessing:
+- Removed unnecessary features (e.g., addresses, links, latitude/longitude) to simplify the dataset and prevent multicollinearity.
+- Engineered features like `number_of_cuisines` and `number_of_types` to enrich the data.
+
+#### Feature Encoding:
+- High-cardinality categorical variables (e.g., cuisines and subzones) were target-encoded to reduce complexity while retaining meaningful relationships.
+- Continuous features were scaled to standardize the input for modeling.
+
+#### Regression Modeling and Evaluation:
+- Various regression models were implemented, including **Linear Regression** and **Stochastic Gradient Descent (SGD)** models.
+- Metrics used for evaluation included:
+  - **Mean Squared Error (MSE)**: Smaller values indicate better performance.
+  - **Mean Absolute Error (MAE)**: Smaller values are preferable.
+  - **R² (R-Squared)**: Higher values (up to 1.0) indicate better variance explanation.
+
+#### Hyperparameter Tuning:
+- Randomized search and cross-validation (10-fold repeated three times) were used to optimize the SGD models.
+
+---
+
+#### Main Findings:
+- **Linear Regression** outperformed all other models, achieving the lowest MSE and MAE while having the highest R² score.
+- Stochastic Gradient Descent models showed similar performance to Linear Regression but did not surpass it, even after hyperparameter tuning.
+- Feature engineering and target encoding significantly improved model interpretability and performance.
+
+#### Classification Modeling:
+- Classified restaurant ratings into categories using models like Logistic Regression.
+- Metrics used for evaluation included:
+  - **Accuracy:** Indicates the overall correctness of predictions.
+  - **Precision:** Measures the proportion of correctly identified positive instances.
+  - **Recall:** Measures the ability to capture all positive instances.
+- To ensure meaningful evaluation, highly correlated features were excluded to avoid artificially inflated accuracy.
+
+#### Main Findings:
+- Logistic Regression was used to classify restaurant ratings, achieving competitive performance across all metrics.
+- Removing highly correlated features ensured the models were robust and generalizable.
+- Both regression and classification models provided actionable insights into the factors influencing restaurant ratings and performance.
+
+**Conclusion:**
+The project highlights the importance of preprocessing, feature engineering, and careful model evaluation in deriving insights from data. Linear Regression and Logistic Regression emerged as effective tools for this dataset, enabling predictions and classifications that could inform restaurant strategies and customer engagement.
+
