@@ -2,7 +2,7 @@
 
 Included in this repository are the following:
 1. DSTS Assignment 1 PDF file.
-2. DSTS Assignment 1 Jupyter Notebook.
+2. DSTS Assignment 1 Jupyter Notebook. This will demonstrate the code and charts used in this project.
 
 This project was coded using Python.
 
