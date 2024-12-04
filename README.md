@@ -122,6 +122,20 @@ Build predictive models to classify and forecast restaurant success.
 2.1 Data Preparation
 The dataset included features such as restaurant address, cost, cuisine, location coordinates, ratings, and restaurant types. Key data preparation steps included:
 
+#### Predictive Modelling
+Before the predictive modelling could begin, feature engineering was applied to the dataset, to ensure the data was prepared for the modelling.
+
+##### Feature Engineering
+**1. Data Cleaning and Handling Missing Values**  
+**Removal of Irrelevant Columns**
+Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
+
+**Missing Values Part 1. Row Removal**
+It was noted that the target variables will be rating_number and rating_text. It was oberved earlier that both of these features have 3316 missing values each. There are three main options when dealing with missing values. Row removal, column removal or imputation. As these two variables will be the target variable, column removal is not an option. Imputing the target variable with a median value would introduce bias, especially with such a large amount of missing values (3316 missing in 10,500 samples). The best option is to remove the rows where these values are missing.
+
+**Convert Groupon to Integer**
+This will be converted to an integer so it can be used in modelling. 1 is True and 0 is False.
+
 Handling Missing Data:
 
 Missing values in numeric columns were imputed with column means.
