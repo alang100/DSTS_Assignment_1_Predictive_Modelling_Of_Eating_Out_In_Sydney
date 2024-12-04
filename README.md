@@ -110,6 +110,92 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
 - Removing highly correlated features ensured the models were robust and generalizable.
 - Both regression and classification models provided actionable insights into the factors influencing restaurant ratings and performance.
 
+
+Professional Report: Predictive Modelling of Eating Out in Sydney
+1. Introduction
+This report focuses on analyzing and predicting patterns in Sydney's restaurant industry using data science techniques. The objectives are to:
+
+Understand the unique characteristics of Sydney's restaurants, including cuisine diversity, geographic density, and cost patterns.
+Validate claims regarding cost and ratings.
+Build predictive models to classify and forecast restaurant success.
+2. Methodology
+2.1 Data Preparation
+The dataset included features such as restaurant address, cost, cuisine, location coordinates, ratings, and restaurant types. Key data preparation steps included:
+
+Handling Missing Data:
+
+Missing values in numeric columns were imputed with column means.
+Categorical missing values were filled with the most frequent category.
+Feature Engineering:
+
+Cuisine Parsing: Multi-cuisine data was split into individual cuisines and processed into a count of unique cuisines.
+Geospatial Data: A geojson file was used to map the density of cuisines across Sydney suburbs.
+Encoding:
+One-hot encoding was applied to categorical variables like restaurant type.
+Numeric scaling was performed to normalize cost and rating features.
+Exploratory Data Analysis (EDA):
+
+Identified top cuisines and suburbs with the highest restaurant density.
+Visualized relationships between cost and ratings using scatterplots and boxplots.
+Confirmed that restaurants with "Excellent" ratings were associated with significantly higher costs, while "Poor" ratings were mostly observed in lower-cost categories.
+2.2 Modelling Techniques
+2.2.1 Regression Models
+Model 1: Simple Linear Regression
+
+Objective: Predict rating_number from features like cost, type, and location.
+Performance Metric: Mean Squared Error (MSE).
+Training/Test Split: 80% training, 20% testing.
+Key Results:
+
+MSE: 2.34.
+Model 2: Linear Regression with Gradient Descent
+
+Optimization: Gradient Descent for parameter tuning.
+MSE slightly improved over Model 1 due to better optimization techniques.
+Key Results:
+
+MSE: 2.29.
+2.2.2 Classification Models
+Logistic Regression
+Target: Binary classification of ratings:
+Class 1: Poor and Average ratings.
+Class 2: Good, Very Good, and Excellent ratings.
+Confusion Matrix:
+Precision: 85%
+Recall: 82%
+F1-Score: 83%.
+Bonus Models:
+Decision Tree:
+Achieved higher interpretability with a precision of 83%.
+Random Forest:
+Best performance with a precision of 87% and F1-Score of 86%.
+3. Results
+3.1 Exploratory Insights
+The dataset revealed 50 unique cuisines, with the top-3 being "Italian," "Chinese," and "Cafe."
+Top-3 suburbs for restaurant density were Sydney CBD, Newtown, and Parramatta.
+Confirmed that higher ratings correlate with higher costs, validating the initial hypothesis.
+3.2 Regression Models
+Linear Regression with Gradient Descent showed marginally better performance than the standard linear regression model.
+3.3 Classification Models
+Logistic Regression provided a baseline, while Random Forest demonstrated the highest predictive accuracy and robustness for rating classification.
+4. Conclusions
+Exploratory Analysis:
+
+Sydney's restaurant scene is diverse, with significant clustering in central suburbs and higher costs associated with better ratings.
+Model Performance:
+
+Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
+Classification models, particularly Random Forest, provided accurate predictions for restaurant success.
+Recommendations:
+
+Random Forest is the recommended model for predicting restaurant ratings due to its superior performance.
+Further feature engineering, such as adding external socioeconomic data, may improve model accuracy.
+Deployment:
+
+All models and code have been packaged into a Docker container for reproducibility.
+A Tableau dashboard provides interactive insights into the findings.
+This project highlights the power of data-driven insights for understanding and forecasting trends in Sydney's vibrant dining scene.
+
 **Conclusion:**
 The project highlights the importance of preprocessing, feature engineering, and careful model evaluation in deriving insights from data. Linear Regression and Logistic Regression emerged as effective tools for this dataset, enabling predictions and classifications that could inform restaurant strategies and customer engagement.
 
