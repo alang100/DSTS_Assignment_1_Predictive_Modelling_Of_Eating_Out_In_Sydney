@@ -220,11 +220,11 @@ Four classification models were built to predict the two ratings classes.
 3. Classification Model 3 - Random Forest
 4. Classification Model 4 - Multi Layer Peceptron. A random parameter serach was applied to this model to optimize its performance. 
 
-**Model**	    **Accuracy**	  **Precision (weighted)**	**Recall (weighted)**	**F1-Score (weighted)**   
-LogReg1         0.85177	         0.85001	               0.85177	              0.85013  
-SVC2	           0.85456	   0.86294	             0.85456	          0.85661  
-RFC3	           0.85943	   0.85835	             0.85943	          0.85871  
-MLP4	           0.85317	   0.85140	             0.85317	          0.85136  
+**Model**nbsp;&nbsp;&nbsp;&nbsp;**Accuracy**nbsp;&nbsp;&nbsp;&nbsp;**Precision (weighted)**nbsp;&nbsp;&nbsp;&nbsp;**Recall (weighted)**nbsp;&nbsp;&nbsp;&nbsp;**F1-Score (weighted)**   
+LogReg1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.85177	         0.85001	               0.85177	              0.85013  
+SVC2nbsp;&nbsp;&nbsp;&nbsp;0.85456	   0.86294	             0.85456	          0.85661  
+RFC3nbsp;&nbsp;&nbsp;&nbsp;0.85943	   0.85835	             0.85943	          0.85871  
+MLP4nbsp;&nbsp;&nbsp;&nbsp;0.85317nbsp;&nbsp;&nbsp;&nbsp;0.85140nbsp;&nbsp;&nbsp;&nbsp;0.85317nbsp;&nbsp;&nbsp;&nbsp;0.85136  
 
 Looking at the table, all four models performed very similarly, however the random forest classifier has the best overall accuracy of 85.94% followed by the support vector machine at 85.46%. The SVM has the highest precision but the RFC won on all the other metrics.
    
