@@ -192,7 +192,15 @@ Three regression models were built to predict rating_number target variable.
 2. Linear Regression Model 2 Using Gradient Descent
 3. Linear Regression Model 3 Using Stochastic Gradient Descent and Gridsearch
 
-Refer to the project file for a table of the results.
+The results are summarised in the table below.
+MSE - Mean Square Error
+MAE - Mean Absolute Error
+R^2 - R-squared
+
+**Model**	**MSE**	**MAE**	**R^2**  
+Linear Regression 1	0.074707	0.192507	0.620833  
+SGD Regressor 2	0.075336	0.194712	0.617640  
+SGD Regressor 3	0.074782	0.193048	0.620453  
 
 Looking at the three metrics for the three models, the results are very similar. The initial linear regression model looks to be slightly better than the Stochastic Gradient Descent models although the margin is extremely slight. Model SGDR3 is slightly better than SGDR2 which is expected as its best hyperparameters were determined using the randomized search. It was the second best performing model on this dataset. The linear regression model had the smallest MSE and MAE values and the highest R^2 value, winning on all three metrics.
 
@@ -234,29 +242,15 @@ In this dataset, which is reasonably balanced and where precision and recall are
 
 To conclude, all models perform very similarly but the random forest classifier is the best for this dataset.
 
-
-
-
-Model Performance:
-
-
-Classification models, particularly Random Forest, provided accurate predictions for restaurant success.
-Recommendations:
-
-Random Forest is the recommended model for predicting restaurant ratings due to its superior performance.
-Further feature engineering, such as adding external socioeconomic data, may improve model accuracy.
-Deployment:
-
-All models and code have been packaged into a Docker container for reproducibility.
-A Tableau dashboard provides interactive insights into the findings.
-This project highlights the power of data-driven insights for understanding and forecasting trends in Sydney's vibrant dining scene.
-
-**Conclusion:**
+### Conclusion
 This was an excellent project that required skills in data visualization, exploratory data analysis, feature engineering, linear regression and classification modelling.
 
 The project highlights the importance of preprocessing, feature engineering, and careful model evaluation in deriving insights from data. Linear Regression and Logistic Regression emerged as effective tools for this dataset, enabling accurate predictions and classifications of the target variable.
 
 Sydney's restaurant scene is diverse, with significant clustering in central suburbs and higher costs associated with better ratings.
+
+All models and code have been packaged into a Docker container for reproducibility.  
+A Tableau dashboard provides interactive insights into the findings.  
 
 
 
