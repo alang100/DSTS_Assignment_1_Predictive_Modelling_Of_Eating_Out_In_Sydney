@@ -222,12 +222,12 @@ Four classification models were built to predict the two ratings classes.
 
 **Model**	    **Accuracy**	  **Precision (weighted)**	**Recall (weighted)**	**F1-Score (weighted)**   
 LogReg1         0.85177	         0.85001	               0.85177	              0.85013  
-SVC2	     0.85456	   0.86294	             0.85456	          0.85661  
-RFC3	     0.85943	   0.85835	             0.85943	          0.85871  
-MLP4	     0.85317	   0.85140	             0.85317	          0.85136  
+SVC2	           0.85456	   0.86294	             0.85456	          0.85661  
+RFC3	           0.85943	   0.85835	             0.85943	          0.85871  
+MLP4	           0.85317	   0.85140	             0.85317	          0.85136  
 
 Looking at the table, all four models performed very similarly, however the random forest classifier has the best overall accuracy of 85.94% followed by the support vector machine at 85.46%. The SVM has the highest precision but the RFC won on all the other metrics.
-
+   
 All the metrics were calculated by using weighted average which takes into account the class imbalance. Looking below, class 1 (Low Rating) is 65% of all the dataset and class 2 (High Rating) is 34%. This is not a huge imbalance but it is still better to use weighted average.
 
 In this dataset, which is reasonably balanced and where precision and recall are not critical, overall accuracy would be the most important measure.
