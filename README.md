@@ -122,7 +122,7 @@ Build predictive models to classify and forecast restaurant success.
 2.1 Data Preparation
 The dataset included features such as restaurant address, cost, cuisine, location coordinates, ratings, and restaurant types. Key data preparation steps included:
 
-#### Predictive Modelling
+### Predictive Modelling
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
 
 ##### Feature Engineering
@@ -175,6 +175,7 @@ The natural log of these two variables had a much more normal distribution than 
 Correlation heatmaps show how each variable relates with another. Of particular interest are how the input variables correlate with the target variables. These contain the name 'rating_'.
 
 #### Part B, II. Regression
+To recap, the rating number of the restaurant is a number ranging from 0 to 5. The median value of the Poor rating was 2.3, ranging up to the median value for the Excellent rating being 4.6.
 - The task was to build a linear regression model (model_regression_1) to predict the restaurants rating (numeric rating) from other features (columns) in the dataset.  
 - Build another linear regression model (model_regression_2) with using the Gradient Descent as the optimisation function.
 
@@ -184,9 +185,81 @@ NOTE! I considered it too much of an advantage of rating_text as an input variab
 **Standardize the Dataset**  
 Standardization is a feature scaling process of subtracting the mean value from each feature and then dividing the difference by the feature's standard deviation. Distance algorithms including linear models are adversely affected by the difference in the range of features. They use distances between data points to determine their similarity. For example, looking at the content in this dataset above, the feature 'cost' has a mean value of 55.0 and a standard deviation of 28.6. Further on, the feature 'cuisine_encoded' has a mean value of 3.28 and a standard deviation of 0.239. As both features have vastly different scales, more weight in the algorithm will be given to 'cost'. This will bias the performance of the model towards 'cost' Ideally, all features should be treated with equal weight. To achieve this, all features will be scaled so that they all have a similar magnitude and variance.
 
-##### Build the Regrssion Models.
+#### Build the Regression Models.
 
-Three regression models were built to predict
+Three regression models were built to predict rating_number target variable.
+1. Linear Regression Model 1
+2. Linear Regression Model 2 Using Gradient Descent
+3. Linear Regression Model 3 Using Stochastic Gradient Descent and Gridsearch
+
+Refer to the project file for a table of the results.
+
+Looking at the three metrics for the three models, the results are very similar. The initial linear regression model looks to be slightly better than the Stochastic Gradient Descent models although the margin is extremely slight. Model SGDR3 is slightly better than SGDR2 which is expected as its best hyperparameters were determined using the randomized search. It was the second best performing model on this dataset. The linear regression model had the smallest MSE and MAE values and the highest R^2 value, winning on all three metrics.
+
+It would have to be concluded that all models are very similar but Linear Regression performs the best for this dataset. Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
+
+#### Part B, III. Classification
+Various models will be configured and run to classify the desired class of ratings as class 1 or class 2. Before commencing with the modelling, the dataset must be configured correctly. As is requested, earlier in the Feature Engineering section, the rating_text was used to create a new variable which is called rating_class. rating_class consists of two values:
+
+Class 1 contains ratings of 'Poor' and 'Average'.
+Class 2 contains ratings of 'Good', 'Very Good' and 'Excellent'.
+
+**Remove the unrequired features for the classification modelling**
+It is mentioned again that the complete dataset was already split into the training and classification test sets previously so that all the feature engineering and imputations did not have to be repeated. A few columns are not required to be used for the classification, so they will be removed.
+
+NOTE! As was done for the regression modelling, all variables containing the word rating are very highly correlated with each other. Including the other two when rating_class is the target led to 100% prediction accuracy, so I removed them for this assignment to be able to compare the models' performance better.
+
+**Standardize the Dataset**
+As was explained and done in the regression modelling, standardization will be applied, to give all variables equal weight in the modelling.
+
+#### Build the Classification Models.
+
+Four classification models were built to predict the two ratings classes.
+1. Classification Model 1 - Logistic Regression
+2. Classification Model 2 - Support Vector Machine
+3. Classification Model 3 - Random Forest
+4. Classification Model 4 - Multi Layer Peceptron. A random parameter serach was applied to this model to optimize its performance. 
+
+**Model**	    Accuracy	  Precision (weighted)	Recall (weighted)	F1-Score (weighted)
+LogReg1	  0.85177	   0.85001	             0.85177	          0.85013
+SVC2	     0.85456	   0.86294	             0.85456	          0.85661
+RFC3	     0.85943	   0.85835	             0.85943	          0.85871
+MLP4	     0.85317	   0.85140	             0.85317	          0.85136
+
+Looking at the table, all four models performed very similarly, however the random forest classifier has the best overall accuracy of 85.94% followed by the support vector machine at 85.46%. The SVM has the highest precision but the RFC won on all the other metrics.
+
+All the metrics were calculated by using weighted average which takes into account the class imbalance. Looking below, class 1 (Low Rating) is 65% of all the dataset and class 2 (High Rating) is 34%. This is not a huge imbalance but it is still better to use weighted average.
+
+In this dataset, which is reasonably balanced and where precision and recall are not critical, overall accuracy would be the most important measure.
+
+To conclude, all models perform very similarly but the random forest classifier is the best for this dataset.
+
+
+
+
+Model Performance:
+
+
+Classification models, particularly Random Forest, provided accurate predictions for restaurant success.
+Recommendations:
+
+Random Forest is the recommended model for predicting restaurant ratings due to its superior performance.
+Further feature engineering, such as adding external socioeconomic data, may improve model accuracy.
+Deployment:
+
+All models and code have been packaged into a Docker container for reproducibility.
+A Tableau dashboard provides interactive insights into the findings.
+This project highlights the power of data-driven insights for understanding and forecasting trends in Sydney's vibrant dining scene.
+
+**Conclusion:**
+This was an excellent project that required skills in data visualization, exploratory data analysis, feature engineering, linear regression and classification modelling.
+
+The project highlights the importance of preprocessing, feature engineering, and careful model evaluation in deriving insights from data. Linear Regression and Logistic Regression emerged as effective tools for this dataset, enabling accurate predictions and classifications of the target variable.
+
+Sydney's restaurant scene is diverse, with significant clustering in central suburbs and higher costs associated with better ratings.
+
+
+
 
 Handling Missing Data:
 
