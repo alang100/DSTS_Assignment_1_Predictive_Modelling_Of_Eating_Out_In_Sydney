@@ -220,8 +220,8 @@ Four classification models were built to predict the two ratings classes.
 3. Classification Model 3 - Random Forest
 4. Classification Model 4 - Multi Layer Peceptron. A random parameter serach was applied to this model to optimize its performance. 
 
-**Model**	    Accuracy	  Precision (weighted)	Recall (weighted)	F1-Score (weighted)  
-LogReg1	  0.85177	   0.85001	             0.85177	          0.85013  
+**Model**	    **Accuracy**	  **Precision (weighted)**	**Recall (weighted)**	**F1-Score (weighted)**   
+LogReg1         0.85177	         0.85001	               0.85177	              0.85013  
 SVC2	     0.85456	   0.86294	             0.85456	          0.85661  
 RFC3	     0.85943	   0.85835	             0.85943	          0.85871  
 MLP4	     0.85317	   0.85140	             0.85317	          0.85136  
