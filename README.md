@@ -197,7 +197,7 @@ MSE - Mean Square Error
 MAE - Mean Absolute Error
 R^2 - R-squared
 
-**Model**	**MSE**	**MAE**	**R^2**  
+**Model**nbsp;&nbsp;&nbsp;&nbsp;**MSE** nbsp;&nbsp;&nbsp;&nbsp;**MAE**	**R^2**  
 Linear Regression 1	0.074707	0.192507	0.620833  
 SGD Regressor 2	0.075336	0.194712	0.617640  
 SGD Regressor 3	0.074782	0.193048	0.620453  
