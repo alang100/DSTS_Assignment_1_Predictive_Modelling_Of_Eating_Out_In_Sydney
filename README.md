@@ -16,7 +16,7 @@ to draw some conclusions, supported by code and graphs, built predictive models,
 This project consists of a real-world dataset containing more than 10K records for restaurants existing in the Sydney area in the year 2018. For every single record, information about the restaurant goes from basic details such as name, address, and location to advanced details such as rating. The objectives are to apply data science skills to predict the restaurant’s success using different machine learning algorithms.
 Table 1 shows the description of the variables in attached dataset.
 
-<img src="Table_1.png" alt="Table 1" width="400">
+<img src="Table_1.png" alt="Table 1" width="600">
 
 ## Project Instructions and Deliverables
 
