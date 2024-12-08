@@ -4,7 +4,7 @@ This project's objectives, instructions, deliverables, methodology and a summary
 
 Included in this repository are the following:
 1. The [Summary_Of_Deliverables_Sydney_Restaurants](Summary_Of_Deliverables_Sydney_Restaurants.pdf)
-2. [Project Jupyter Notebook](Modelling_Of_Eating_Out_In_Sydney.ipynb). This will demonstrate the code and charts used in this project.
+2. [Project Jupyter Notebook](Modelling_Of_Eating_Out_In_Sydney.ipynb). This will demonstrate the code, output charts and modelling outcomes used in this project.
 3. [Project_Output_HTML](Modelling_Of_Eating_Out_In_Sydney.html). The code and output is also provided in HTML format for easier viewing access.
 4. The link to the [Tableau Dashboard](https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes). "Dashboard1" is the main tab, but several others were made.
 
