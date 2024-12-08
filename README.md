@@ -1,4 +1,4 @@
-# Data Science and Tech Systems Assignment 1: Predictive Modelling of Eating Out In Sydney
+Predictive Modelling of Eating Out In Sydney
 
 Included in this repository are the following:
 1. DSTS Assignment 1 PDF file.
