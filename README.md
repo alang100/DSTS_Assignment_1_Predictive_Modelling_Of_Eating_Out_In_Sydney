@@ -99,60 +99,10 @@ C.
 ## Part B: Project Summary and Main Outcomes
 Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
 
-### Modelling Process:
-
-#### Data Cleaning and Preprocessing:
-- Removed unnecessary features (e.g., addresses, links, latitude/longitude) to simplify the dataset and prevent multicollinearity.
-- Engineered features like `number_of_cuisines` and `number_of_types` to enrich the data.
-
-#### Feature Encoding:
-- High-cardinality categorical variables (e.g., cuisines and subzones) were target-encoded to reduce complexity while retaining meaningful relationships.
-- Continuous features were scaled to standardize the input for modeling.
-
-#### Regression Modeling and Evaluation:
-- Various regression models were implemented, including **Linear Regression** and **Stochastic Gradient Descent (SGD)** models.
-- Metrics used for evaluation included:
-  - **Mean Squared Error (MSE)**: Smaller values indicate better performance.
-  - **Mean Absolute Error (MAE)**: Smaller values are preferable.
-  - **R² (R-Squared)**: Higher values (up to 1.0) indicate better variance explanation.
-
-#### Hyperparameter Tuning:
-- Randomized search and cross-validation (10-fold repeated three times) were used to optimize the SGD models.
-
-#### Main Findings:
-- **Linear Regression** outperformed all other models, achieving the lowest MSE and MAE while having the highest R² score.
-- Stochastic Gradient Descent models showed similar performance to Linear Regression but did not surpass it, even after hyperparameter tuning.
-- Feature engineering and target encoding significantly improved model interpretability and performance.
-
-#### Classification Modeling:
-- Classified restaurant ratings into categories using models like Logistic Regression.
-- Metrics used for evaluation included:
-  - **Accuracy:** Indicates the overall correctness of predictions.
-  - **Precision:** Measures the proportion of correctly identified positive instances.
-  - **Recall:** Measures the ability to capture all positive instances.
-- To ensure meaningful evaluation, highly correlated features were excluded to avoid artificially inflated accuracy.
-
-#### Main Findings:
-- Logistic Regression was used to classify restaurant ratings, achieving competitive performance across all metrics.
-- Removing highly correlated features ensured the models were robust and generalizable.
-- Both regression and classification models provided actionable insights into the factors influencing restaurant ratings and performance.
-
-
-Professional Report: Predictive Modelling of Eating Out in Sydney
-1. Introduction
-This report focuses on analyzing and predicting patterns in Sydney's restaurant industry using data science techniques. The objectives are to:
-
-Understand the unique characteristics of Sydney's restaurants, including cuisine diversity, geographic density, and cost patterns.
-Validate claims regarding cost and ratings.
-Build predictive models to classify and forecast restaurant success.
-2. Methodology
-2.1 Data Preparation
-The dataset included features such as restaurant address, cost, cuisine, location coordinates, ratings, and restaurant types. Key data preparation steps included:
-
 ### Predictive Modelling
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
 
-#### Feature Engineering
+#### I. Feature Engineering
 **1. Data Cleaning and Handling Missing Values**  
 **Removal of Irrelevant Columns**  
 Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
@@ -208,7 +158,7 @@ The natural log of these two variables had a much more normal distribution than 
 **Correlation Heatmaps**
 Correlation heatmaps show how each variable relates with another. Of particular interest are how the input variables correlate with the target variables. These contain the name 'rating_'. Heatmaps were used to determine which variables correlated strongest with the target variables and if there would be any potential issues of multicollinearity among input variables. 
 
-#### Part B, II. Regression  
+#### Part B II. Regression Modelling  
 To recap, the rating number of the restaurant is a number ranging from 0 to 5. The median value of the Poor rating was 2.3, ranging up to the median value for the Excellent rating being 4.6.
 - The task was to build a linear regression model (model_regression_1) to predict the restaurants rating (numeric rating) from other features (columns) in the dataset.  
 - Build another linear regression model (model_regression_2) with using the Gradient Descent as the optimisation function.
@@ -238,7 +188,7 @@ Looking at the three metrics for the three models, the results are very similar.
 
 It would have to be concluded that all models are very similar but Linear Regression performs the best for this dataset. Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
 
-#### Part B, III. Classification
+#### Part B III. Classification Modelling  
 Various models will be configured and run to classify the desired class of ratings as class 1 or class 2. Before commencing with the modelling, the dataset must be configured correctly. As is requested, earlier in the Feature Engineering section, the rating_text was used to create a new variable which is called rating_class. rating_class consists of two values:
 
 Class 1 contains ratings of 'Poor' and 'Average'.  
