@@ -157,7 +157,7 @@ Before the predictive modelling could begin, several feature engineering techniq
 **Removal of Irrelevant Columns**  
 Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
 
-**Missing Values Part 1. Row Removal**
+**Missing Values Part 1 - Row Removal**
 It was noted that the target variables will be rating_number and rating_text. It was oberved earlier that both of these features have 3316 missing values each. There are three main options when dealing with missing values. Row removal, column removal or imputation. As these two variables will be the target variable, column removal is not an option. Imputing the target variable with a median value would introduce bias, especially with such a large amount of missing values (3316 missing in 10,500 samples). The best option is to remove the rows where these values are missing.
 
 **Convert Boolean Variables to Integer**
@@ -195,7 +195,7 @@ Replaces categorical variables with the mean of the target variable for each cat
 Purpose: Captures the relationship between the category and the target variable (rating_number) while reducing dimensionality. This was applied to the variables 'cuisine_type' and 'subzone' or suburb which both had hundreds of unique categories. Creating so many unique variables for each category is impractical with one-hot encoding, so target encoding was deployed.
 
 
-**Missing Values 2. Imputation**
+**Missing Values 2 - Imputation**
 So that the training set will not have any influence on the test set, before performing imputations the dataset was split into the training and test sets. Imputations will be performed on the training set and those same values will be set on the test set. This ensures that the test set has not been given any additional information in the modelling process.
 
 **Impute the missing values in 'cost' with the median cost when grouped by restaurant 'type'**
