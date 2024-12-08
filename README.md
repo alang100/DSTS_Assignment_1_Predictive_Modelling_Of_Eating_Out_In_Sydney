@@ -185,7 +185,15 @@ In the EDA section, it was observed that the natural log of the cost and the num
 **Split the Dataset into Training and Test Sets**
 Before further feature engineering and data imputation is performed, it is important to split the data into the training and test sets and first perform all the feature engineering and imputations on the training set. This will ensure that the modelling is free from any bias or influence from the test set. These modifications will then be applied to the test set, ensuring the test set had no influence.
 
-**Create Functions for Target Encoding and One-Hot Encoding**
+**Apply One-Hot Encoding and Target Encoding to Certain Variables**
+One-Hot Encoding:
+Creates binary columns for each unique category, assigning 1 if the category applies and 0 otherwise (e.g., restaurant types).
+Purpose: Handles multi-label data (restaurants with multiple types) and ensures compatibility with machine learning models.
+The original columns were dropped to avoid redundancy and ensure clean inputs for modeling. This was applied to all the "unique restaurant types" variable which had 14 unique categories such as 'Cafe', 'Bar', or 'Food Stall'.  
+Target Encoding:
+Replaces categorical variables with the mean of the target variable for each category (e.g., average rating for each cuisine or subzone).
+Purpose: Captures the relationship between the category and the target variable (rating_number) while reducing dimensionality. This was applied to the variables 'cuisine_type' and 'subzone' or suburb which both had hundreds of unique categories. Creating so many unique variables for each category is impractical with one-hot encoding, so target encoding was deployed.
+
 
 **Missing Values 2. Imputation**
 So that the training set will not have any influence on the test set, before performing imputations the dataset was split into the training and test sets. Imputations will be performed on the training set and those same values will be set on the test set. This ensures that the test set has not been given any additional information in the modelling process.
@@ -193,13 +201,12 @@ So that the training set will not have any influence on the test set, before per
 **Impute the missing values in 'cost' with the median cost when grouped by restaurant 'type'**
 This should be far more accurate than just the median price of cost, as the prices will be considerably different for different restaurant types. For example, a 'Fine Dining' restaurant will be far more expensive than a 'Food Court'.
 
-
 **Create Features Log of Cost and Log of Votes**
 Now that there are no more missing values, these two features can be implemented into the training and test sets.
 The natural log of these two variables had a much more normal distribution than the original variables, and a higher correlation with the target variable. This is expected to result in improved modelling performance.
 
 **Correlation Heatmaps**
-Correlation heatmaps show how each variable relates with another. Of particular interest are how the input variables correlate with the target variables. These contain the name 'rating_'.
+Correlation heatmaps show how each variable relates with another. Of particular interest are how the input variables correlate with the target variables. These contain the name 'rating_'. Heatmaps were used to determine which variables correlated strongest with the target variables and if there would be any potential issues of multicollinearity among input variables. 
 
 #### Part B, II. Regression
 To recap, the rating number of the restaurant is a number ranging from 0 to 5. The median value of the Poor rating was 2.3, ranging up to the median value for the Excellent rating being 4.6.
@@ -224,10 +231,7 @@ MSE - Mean Square Error
 MAE - Mean Absolute Error
 R^2 - R-squared
 
-**Model**nbsp;&nbsp;&nbsp;&nbsp;**MSE** **MAE**	**R<sup>2<sup/>**  
-Linear Regression 1	0.074707	0.192507	0.620833  
-SGD Regressor 2	0.075336	0.194712	0.617640  
-SGD Regressor 3	0.074782	0.193048	0.620453  
+<img src="Reg_table.png" alt="Regression Table" width="500">
 
 Looking at the three metrics for the three models, the results are very similar. The initial linear regression model looks to be slightly better than the Stochastic Gradient Descent models although the margin is extremely slight. Model SGDR3 is slightly better than SGDR2 which is expected as its best hyperparameters were determined using the randomized search. It was the second best performing model on this dataset. The linear regression model had the smallest MSE and MAE values and the highest R^2 value, winning on all three metrics.
 
@@ -255,11 +259,7 @@ Four classification models were built to predict the two ratings classes.
 3. Classification Model 3 - Random Forest
 4. Classification Model 4 - Multi Layer Peceptron. A random parameter serach was applied to this model to optimize its performance. 
 
-**Model**nbsp;&nbsp;&nbsp;&nbsp;**Accuracy**nbsp;&nbsp;&nbsp;&nbsp;**Precision (weighted)**nbsp;&nbsp;&nbsp;&nbsp;**Recall (weighted)**nbsp;&nbsp;&nbsp;&nbsp;**F1-Score (weighted)**   
-LogReg1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.85177	         0.85001	               0.85177	              0.85013  
-SVC2nbsp;&nbsp;&nbsp;&nbsp;0.85456	   0.86294	             0.85456	          0.85661  
-RFC3nbsp;&nbsp;&nbsp;&nbsp;0.85943	   0.85835	             0.85943	          0.85871  
-MLP4nbsp;&nbsp;&nbsp;&nbsp;0.85317nbsp;&nbsp;&nbsp;&nbsp;0.85140nbsp;&nbsp;&nbsp;&nbsp;0.85317nbsp;&nbsp;&nbsp;&nbsp0.85136  
+<img src="Class_table.png" alt="Classification Table" width="500">
 
 Looking at the table, all four models performed very similarly, however the random forest classifier has the best overall accuracy of 85.94% followed by the support vector machine at 85.46%. The SVM has the highest precision but the RFC won on all the other metrics.
    
@@ -277,85 +277,4 @@ The project highlights the importance of preprocessing, feature engineering, and
 Sydney's restaurant scene is diverse, with significant clustering in central suburbs and higher costs associated with better ratings.
 
 All models and code have been packaged into a Docker container for reproducibility.  
-A Tableau dashboard provides interactive insights into the findings.  
-
-
-
-
-Handling Missing Data:
-
-Missing values in numeric columns were imputed with column means.
-Categorical missing values were filled with the most frequent category.
-Feature Engineering:
-
-Cuisine Parsing: Multi-cuisine data was split into individual cuisines and processed into a count of unique cuisines.
-Geospatial Data: A geojson file was used to map the density of cuisines across Sydney suburbs.
-Encoding:
-One-hot encoding was applied to categorical variables like restaurant type.
-Numeric scaling was performed to normalize cost and rating features.
-Exploratory Data Analysis (EDA):
-
-Identified top cuisines and suburbs with the highest restaurant density.
-Visualized relationships between cost and ratings using scatterplots and boxplots.
-Confirmed that restaurants with "Excellent" ratings were associated with significantly higher costs, while "Poor" ratings were mostly observed in lower-cost categories.
-2.2 Modelling Techniques
-2.2.1 Regression Models
-Model 1: Simple Linear Regression
-
-Objective: Predict rating_number from features like cost, type, and location.
-Performance Metric: Mean Squared Error (MSE).
-Training/Test Split: 80% training, 20% testing.
-Key Results:
-
-MSE: 2.34.
-Model 2: Linear Regression with Gradient Descent
-
-Optimization: Gradient Descent for parameter tuning.
-MSE slightly improved over Model 1 due to better optimization techniques.
-Key Results:
-
-MSE: 2.29.
-2.2.2 Classification Models
-Logistic Regression
-Target: Binary classification of ratings:
-Class 1: Poor and Average ratings.
-Class 2: Good, Very Good, and Excellent ratings.
-Confusion Matrix:
-Precision: 85%
-Recall: 82%
-F1-Score: 83%.
-Bonus Models:
-Decision Tree:
-Achieved higher interpretability with a precision of 83%.
-Random Forest:
-Best performance with a precision of 87% and F1-Score of 86%.
-3. Results
-3.1 Exploratory Insights
-The dataset revealed 50 unique cuisines, with the top-3 being "Italian," "Chinese," and "Cafe."
-Top-3 suburbs for restaurant density were Sydney CBD, Newtown, and Parramatta.
-Confirmed that higher ratings correlate with higher costs, validating the initial hypothesis.
-3.2 Regression Models
-Linear Regression with Gradient Descent showed marginally better performance than the standard linear regression model.
-3.3 Classification Models
-Logistic Regression provided a baseline, while Random Forest demonstrated the highest predictive accuracy and robustness for rating classification.
-4. Conclusions
-Exploratory Analysis:
-
-Sydney's restaurant scene is diverse, with significant clustering in central suburbs and higher costs associated with better ratings.
-Model Performance:
-
-Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
-Classification models, particularly Random Forest, provided accurate predictions for restaurant success.
-Recommendations:
-
-Random Forest is the recommended model for predicting restaurant ratings due to its superior performance.
-Further feature engineering, such as adding external socioeconomic data, may improve model accuracy.
-Deployment:
-
-All models and code have been packaged into a Docker container for reproducibility.
-A Tableau dashboard provides interactive insights into the findings.
-This project highlights the power of data-driven insights for understanding and forecasting trends in Sydney's vibrant dining scene.
-
-**Conclusion:**
-The project highlights the importance of preprocessing, feature engineering, and careful model evaluation in deriving insights from data. Linear Regression and Logistic Regression emerged as effective tools for this dataset, enabling predictions and classifications that could inform restaurant strategies and customer engagement.
-
+The [Tableau Dashboard](https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes) provides interactive insights into the findings.
