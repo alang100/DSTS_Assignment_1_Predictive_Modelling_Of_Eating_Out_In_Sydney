@@ -10,8 +10,7 @@ Included in this repository are the following:
 
 
 ## Project Objectives
-I used a real word dataset on eating-out habits in Sydney. To this dataset I applied feature engineering, modelling and deployment knowledge 
-to draw some conclusions, supported by code and graphs, built predictive models, and deployed the work on a public repository.
+This project used a real word dataset on eating-out habits in Sydney. To this dataset, I applied feature engineering, modelling and deployment knowledge to draw some conclusions, supported by code and graphs, built predictive models, and deployed the work on a public repository.
 
 ## Data Description
 This project consists of a real-world dataset containing more than 10K records for restaurants existing in the Sydney area in the year 2018. For every single record, information about the restaurant goes from basic details such as name, address, and location to advanced details such as rating. The objectives are to apply data science skills to predict the restaurant’s success using different machine learning algorithms.
@@ -83,9 +82,24 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
 
 --- 
 
-## Project Summary and Main Outcomes
+## Part A: Exploratory Data Analysis
+Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
 
-### Modelling:
+To briefly answer the main questions asked.
+A. There are 134 unique cuisines served in this dataset of Sydney.  
+B. The three suburbs with the most restaurants are 
+- 1. Sydney CBD: 476
+  2. Surry Hills: 260
+  3. Parramatta: 225
+ c. **Are restaurants with ‘excellent’ rating are mostly very expensive?** No. 
+ while those with ‘Poor’ rating are rarely expensive?**: Only 16 restaurants with an Excellent rating are 'Very Expensive'. This represents 31.4% of all excellent ratings.
+**Restaurants with a ‘Poor’ rating are rarely expensive?**:  With my estimate of an expensive and very expensive restaurant that 66 and 22 were rated poor respectively. These numbers are inline with the numbers of restaurants in these categories.  
+
+
+## Part B: Project Summary and Main Outcomes
+Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
+
+### Modelling Process:
 
 #### Data Cleaning and Preprocessing:
 - Removed unnecessary features (e.g., addresses, links, latitude/longitude) to simplify the dataset and prevent multicollinearity.
