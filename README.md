@@ -226,14 +226,12 @@ Three regression models were built to predict rating_number target variable.
 2. Linear Regression Model 2 Using Gradient Descent
 3. Linear Regression Model 3 Using Stochastic Gradient Descent and Gridsearch
 
-The results are summarised in the table below.
-MSE - Mean Square Error
-MAE - Mean Absolute Error
-R^2 - R-squared
-<br>
-<img src="Reg_table.png" alt="Regression Table" width="350">
+The results are summarised in the table below.  
+MSE - Mean Square Error  
+MAE - Mean Absolute Error  
+R^2 - R-squared  
 <br>  
-**Table 2 - Regression Modelling Metrics**  
+<img src="Reg_table.png" alt="Regression Table" width="350">**Table 2 - Regression Modelling Metrics**  
 
 Looking at the three metrics for the three models, the results are very similar. The initial linear regression model looks to be slightly better than the Stochastic Gradient Descent models although the margin is extremely slight. Model SGDR3 is slightly better than SGDR2 which is expected as its best hyperparameters were determined using the randomized search. It was the second best performing model on this dataset. The linear regression model had the smallest MSE and MAE values and the highest R^2 value, winning on all three metrics.
 
