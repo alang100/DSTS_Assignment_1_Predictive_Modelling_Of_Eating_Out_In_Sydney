@@ -95,10 +95,6 @@ B. The three suburbs with the most restaurants are
 C.  
  1. **Are restaurants with ‘excellent’ rating mostly very expensive?** No. Only 16 restaurants with an Excellent rating are 'Very Expensive'. This represents 31.4% of all excellent ratings.
  2. **Restaurants with a ‘Poor’ rating are rarely expensive?** With my estimate of an expensive and very expensive restaurant, 66 and 22 were rated poor respectively. These numbers are inline with the numbers of restaurants in these categories.  
- 
-C.i. **Are restaurants with ‘excellent’ rating mostly very expensive?** No. Only 16 restaurants with an Excellent rating are 'Very Expensive'. This represents 31.4% of all excellent ratings.  
- ii. **Restaurants with a ‘Poor’ rating are rarely expensive?** With my estimate of an expensive and very expensive restaurant, 66 and 22 were rated poor respectively. These numbers are inline with the numbers of restaurants in these categories. 
-
 
 ## Part B: Project Summary and Main Outcomes
 Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
