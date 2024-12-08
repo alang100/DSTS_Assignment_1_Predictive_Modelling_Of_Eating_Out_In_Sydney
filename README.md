@@ -231,7 +231,7 @@ MSE - Mean Square Error
 MAE - Mean Absolute Error
 R^2 - R-squared
 
-<img src="Reg_table.png" alt="Regression Table" width="500">
+<img src="Reg_table.png" alt="Regression Table" width="250">
 
 Looking at the three metrics for the three models, the results are very similar. The initial linear regression model looks to be slightly better than the Stochastic Gradient Descent models although the margin is extremely slight. Model SGDR3 is slightly better than SGDR2 which is expected as its best hyperparameters were determined using the randomized search. It was the second best performing model on this dataset. The linear regression model had the smallest MSE and MAE values and the highest R^2 value, winning on all three metrics.
 
@@ -259,7 +259,7 @@ Four classification models were built to predict the two ratings classes.
 3. Classification Model 3 - Random Forest
 4. Classification Model 4 - Multi Layer Peceptron. A random parameter serach was applied to this model to optimize its performance. 
 
-<img src="Class_table.png" alt="Classification Table" width="500">
+<img src="Class_table.png" alt="Classification Table" width="250">
 
 Looking at the table, all four models performed very similarly, however the random forest classifier has the best overall accuracy of 85.94% followed by the support vector machine at 85.46%. The SVM has the highest precision but the RFC won on all the other metrics.
    
