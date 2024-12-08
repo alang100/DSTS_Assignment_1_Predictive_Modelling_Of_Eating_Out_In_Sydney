@@ -168,7 +168,7 @@ NOTE! I considered it too much of an advantage of rating_text as an input variab
 **Standardize the Dataset**  
 Standardization is a feature scaling process of subtracting the mean value from each feature and then dividing the difference by the feature's standard deviation. Distance algorithms including linear models are adversely affected by the difference in the range of features. They use distances between data points to determine their similarity. For example, looking at the content in this dataset above, the feature 'cost' has a mean value of 55.0 and a standard deviation of 28.6. Further on, the feature 'cuisine_encoded' has a mean value of 3.28 and a standard deviation of 0.239. As both features have vastly different scales, more weight in the algorithm will be given to 'cost'. This will bias the performance of the model towards 'cost' Ideally, all features should be treated with equal weight. To achieve this, all features will be scaled so that they all have a similar magnitude and variance.
 
-#### Build the Regression Models.  
+**Build the Regression Models**  
 Three regression models were built to predict rating_number target variable.
 
 1. Linear Regression Model 1
@@ -187,7 +187,7 @@ Looking at the three metrics for the three models, the results are very similar.
 
 It would have to be concluded that all models are very similar but Linear Regression performs the best for this dataset. Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
 
-### III. Classification Modelling  
+### III. Classification Modelling
 Various models will be configured and run to classify the desired class of ratings as class 1 or class 2. Before commencing with the modelling, the dataset must be configured correctly. As is requested, earlier in the Feature Engineering section, the rating_text was used to create a new variable which is called rating_class. rating_class consists of two values:
 
 Class 1 contains ratings of 'Poor' and 'Average'.  
