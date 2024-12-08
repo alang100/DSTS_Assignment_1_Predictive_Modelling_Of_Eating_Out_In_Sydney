@@ -45,6 +45,7 @@ Implement the feature engineering approaches to:
 2. Use proper label/feature encoding for each feature/column you consider making the data ready for the modelling step.  
 
 **II. Regression:**  
+
  3. Build a linear regression model (model_regression_1) to predict the restaurants rating (numeric rating) from other features (columns) in the dataset. Please consider splitting the data into train (80%) and test (20%) sets.  
 
  4. Build another linear regression model (model_regression_2) with using the Gradient Descent as the optimisation function.  
@@ -52,6 +53,7 @@ Implement the feature engineering approaches to:
  5. Report the mean square error (MSE) on the test data for both models.  
 
 **III. Classification:**  
+
  6. Simplify the problem into binary classifications where class 1 contains ‘Poor’ and ‘Average’ records while class 2 contains ‘Good’, ‘Very Good’ and ‘Excellent’ records.  
 
  7. Build a logistic regression model (model_classification_3) for the simplified data, where training data is 80% and the test data is 20%.
@@ -109,6 +111,7 @@ Before the predictive modelling could begin, several feature engineering techniq
 The feature engineering process involved several important steps to preapre the data optimally for modelling. These steps are briefly outlined here.
 
 **Data Cleaning and Handling Missing Values**  
+
 **Removal of Irrelevant Columns**  
 Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
 
