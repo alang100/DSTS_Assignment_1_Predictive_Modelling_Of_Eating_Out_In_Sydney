@@ -76,7 +76,6 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
 
 **2- A PDF document with the following:**  
  a. Link to the Tableau Dashboard.  
- https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes  
  b. Results of the (regression and classification) trained models on the test data. These results need to be listed into two tables: one for the regression and another for the classification.  
  c. The list of the commands that you have used to deploy your source code to the GitLab repository.  
  d. The list of the commands that you have used to create and to push the Docker image to the Docker Hub.  
@@ -84,6 +83,7 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
  f. The Link of the Docker image you have deployed on the Docker Hub.  
 
 --- 
+
 ##  Brief Explanation of the Output and Results
 ## Part A: Exploratory Data Analysis
 Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
