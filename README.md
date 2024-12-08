@@ -6,13 +6,13 @@ Included in this repository are the following:
 1. The [Summary_Of_Deliverables_Sydney_Restaurants](Summary_Of_Deliverables_Sydney_Restaurants.pdf)
 2. Modelling_Of_Eating_Out_In_Sydney.ipynb. This will demonstrate the code and charts used in this project.
 3. Modelling_Of_Eating_Out_In_Sydney.html. The code and output is also provided in HTML format for easier viewing access.
-4. The link to the [Tableau Dashboard](https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes). 
+4. The link to the [Tableau Dashboard](https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes). "Dashboard1" is the main tab, but several others were made.
 
 1. [The final report](NLP%20Final%20Project%20Report.pdf)
 2. [The final presentation](NLP%20Final%20Presentation.pdf)
 3. [The code for the final report](NLP%20Final%20Project%20Code.ipynb)
 4. [The code for the undersampling evaluation](NLP%20Undersampling%20Evaluation%20Code.ipynb)
-5. [The code for the Midsemester baseline](NLP_Project_Midsemester.ipynb) "Dashboard1" is the main tab, but several others were made.
+5. [The code for the Midsemester baseline](NLP_Project_Midsemester.ipynb) 
 
 ## Project Objectives
 I used a real word dataset on eating-out habits in Sydney. To this dataset I applied feature engineering, modelling and deployment knowledge 
