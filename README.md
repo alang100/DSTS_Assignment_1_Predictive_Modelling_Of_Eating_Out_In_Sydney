@@ -21,7 +21,7 @@ Table 1 shows the description of the variables in attached dataset.
 ## Project Instructions and Deliverables
 
 ### Part A – Importing and Understanding Data  
-**1 - Provide plots/graphs to support:**
+**1 - Provide plots/graphs to support:**  
   * How many unique cuisines are served by Sydney restaurants?
   * which suburbs (top-3) have the highest number of restaurants?
   * “Restaurants with ‘excellent’ rating are mostly very expensive while those with ‘Poor’ rating are rarely expensive”. Do you agree on this statement or not? Please support your answer by numbers and visuals.
@@ -31,24 +31,27 @@ Table 1 shows the description of the variables in attached dataset.
   * Rating
   * Type
 
-**3 - Produce Cuisine Density Map:** Using the restaurant geographic information and the provided “sydney.geojson” file, write a python function to show a cuisine density map where each suburb is colour-coded by the number of restaurants that serve a particular cuisine. Use Geopandas.   
+**3 - Produce Cuisine Density Map:**  
+Using the restaurant geographic information and the provided “sydney.geojson” file, write a python function to show a cuisine density map where each suburb is colour-coded by the number of restaurants that serve a particular cuisine. Use Geopandas.   
 
-**4 - Tableau Dashboard for quick insights:** Can you generate a Tableau dashboard that visualises some of the graphs/plots to answer some of the EDA questions above? Also, can you share this dashboard on the Tableau public?  
+**4 - Tableau Dashboard for quick insights:**  
+Can you generate a Tableau dashboard that visualises some of the graphs/plots to answer some of the EDA questions above? Also, can you share this dashboard on the Tableau public?  
 
 ### Part B – Predictive Modelling
 In this part, you are expected to apply predictive modelling to predict/classify the success of the restaurants.  
-**I. Feature Engineering:** Implement the feature engineering approaches to:  
+**I. Feature Engineering:**  
+Implement the feature engineering approaches to:  
 1. Perform data cleaning to remove/impute any records that are useless in the predictive task (such as NA, NaN, etc.)  
 2. Use proper label/feature encoding for each feature/column you consider making the data ready for the modelling step.  
 
-**II. Regression:**
+**II. Regression:**  
  3. Build a linear regression model (model_regression_1) to predict the restaurants rating (numeric rating) from other features (columns) in the dataset. Please consider splitting the data into train (80%) and test (20%) sets.  
 
  4. Build another linear regression model (model_regression_2) with using the Gradient Descent as the optimisation function.  
 
  5. Report the mean square error (MSE) on the test data for both models.  
 
-**III. Classification:**
+**III. Classification:**  
  6. Simplify the problem into binary classifications where class 1 contains ‘Poor’ and ‘Average’ records while class 2 contains ‘Good’, ‘Very Good’ and ‘Excellent’ records.  
 
  7. Build a logistic regression model (model_classification_3) for the simplified data, where training data is 80% and the test data is 20%.
