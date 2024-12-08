@@ -84,9 +84,10 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
 
 --- 
 
-##  Brief Explanation of the Output and Results
+##  Brief Explanation of the Methodology, Output and Results
+This section provides a brief presentation of the methodology and results. Refer to the Jupyter notebook or the HTML file included in this repository for the complete details of the code, outputs and charts produced for this project.
+
 ## Part A: Exploratory Data Analysis
-Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
 
 To briefly answer the main questions asked.  
 A. There are 134 unique cuisines served in this dataset of Sydney.  
@@ -100,7 +101,6 @@ C.
  2. **Restaurants with a ‘Poor’ rating are rarely expensive?** With my estimate of an expensive and very expensive restaurant, 66 and 22 were rated poor respectively. These numbers are inline with the numbers of restaurants in these categories.  
 
 ## Part B: Project Summary and Main Outcomes
-Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
 
 ### Predictive Modelling
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
