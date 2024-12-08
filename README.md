@@ -1,12 +1,12 @@
 # Predictive Modelling of Eating Out In Sydney
 
-This project was coded using Python.
-
 This project's objectives, instructions, deliverables, methodology and a summary of the main outcomes are provided below.
 
 Included in this repository are the following:
-1. DSTS Assignment 1 PDF file.
-2. DSTS Assignment 1 Jupyter Notebook. This will demonstrate the code and charts used in this project.
+1. Summary_Of_Deliverables_Sydney_Restaurants.pdf
+2. Modelling_Of_Eating_Out_In_Sydney.ipynb. This will demonstrate the code and charts used in this project.
+3. Modelling_Of_Eating_Out_In_Sydney.html. The code and output is also provided in HTML format for easier viewing access.
+4. https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes
 
 ## Project Objectives
 I used a real word dataset on eating-out habits in Sydney. To this dataset I applied feature engineering, modelling and deployment knowledge 
