@@ -90,9 +90,10 @@ A. There are 134 unique cuisines served in this dataset of Sydney.
 B. The three suburbs with the most restaurants are 
  1. Sydney CBD: 476
  2. Surry Hills: 260
- 3. Parramatta: 225  
+ 3. Parramatta: 225
+    
 C. **Are restaurants with ‘excellent’ rating are mostly very expensive?** No. 
-while those with ‘Poor’ rating are rarely expensive?**: Only 16 restaurants with an Excellent rating are 'Very Expensive'. This represents 31.4% of all excellent ratings.
+while those with ‘Poor’ rating are rarely expensive?**: Only 16 restaurants with an Excellent rating are 'Very Expensive'. This represents 31.4% of all excellent ratings.  
 **Restaurants with a ‘Poor’ rating are rarely expensive?**:  With my estimate of an expensive and very expensive restaurant that 66 and 22 were rated poor respectively. These numbers are inline with the numbers of restaurants in these categories.  
 
 
