@@ -102,18 +102,18 @@ Refer to the Jupyter notebook or the HTML file included in this repository for t
 ### Predictive Modelling
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
 
-#### I. Feature Engineering
+### Part B I - Feature Engineering
 **1. Data Cleaning and Handling Missing Values**  
 **Removal of Irrelevant Columns**  
 Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
 
-**Missing Values Part 1 - Row Removal**
+**Missing Values Part 1 - Row Removal**  
 It was noted that the target variables will be rating_number and rating_text. It was oberved earlier that both of these features have 3316 missing values each. There are three main options when dealing with missing values. Row removal, column removal or imputation. As these two variables will be the target variable, column removal is not an option. Imputing the target variable with a median value would introduce bias, especially with such a large amount of missing values (3316 missing in 10,500 samples). The best option is to remove the rows where these values are missing.
 
-**Convert Boolean Variables to Integer**
+**Convert Boolean Variables to Integer**  
 Groupon will be converted to an integer so it can be used in modelling. 1 is True and 0 is False.
 
-**Create the Rating Class Variable**
+**Create the Rating Class Variable**  
 As specified in the instructions, for the classification a new variable called rating_class is to be created as follows:  
 Class 1 or 'Low Rating' contains ratings of Poor and Average.  
 Class 2 or 'High Rating' contains ratings of Good, Very Good and Excellent.
@@ -121,7 +121,7 @@ Class 2 or 'High Rating' contains ratings of Good, Very Good and Excellent.
 **Change the Rating_Text Variable to Numeric**  
 The rating_text variable is clearly related to the rating_numeric. It has been observed that for every text rating, there is a consistent range for rating_number. The text ratings will be replaced by the median value of rating_number for each category of rating_text.
 
-**Change the Price_Category Variable to Numeric**
+**Change the Price_Category Variable to Numeric**  
 The price_category could well be correlated to the rating score. For the machine learning process, it will be converted to an ordinal numeric value. Previously, the price categories were definied as follows:
 
 cost_bins = [0, 35, 55, 90, 501]
@@ -132,10 +132,10 @@ They will now be defined numerical from 1 to 4, where 1 is cheap and 4 is very e
 **Apply Natural Logarithms to Certain Features**  
 In the EDA section, it was observed that the natural log of the cost and the number of votes had a more normal distribution than the original variables. New features will be made of the natural log of these features and they will be examined to see how they correlate with the target variable.
 
-**Split the Dataset into Training and Test Sets**
+**Split the Dataset into Training and Test Sets**  
 Before further feature engineering and data imputation is performed, it is important to split the data into the training and test sets and first perform all the feature engineering and imputations on the training set. This will ensure that the modelling is free from any bias or influence from the test set. These modifications will then be applied to the test set, ensuring the test set had no influence.
 
-**Apply One-Hot Encoding and Target Encoding to Certain Variables**
+**Apply One-Hot Encoding and Target Encoding to Certain Variables**  
 One-Hot Encoding:
 Creates binary columns for each unique category, assigning 1 if the category applies and 0 otherwise (e.g., restaurant types).
 Purpose: Handles multi-label data (restaurants with multiple types) and ensures compatibility with machine learning models.
@@ -144,21 +144,20 @@ Target Encoding:
 Replaces categorical variables with the mean of the target variable for each category (e.g., average rating for each cuisine or subzone).
 Purpose: Captures the relationship between the category and the target variable (rating_number) while reducing dimensionality. This was applied to the variables 'cuisine_type' and 'subzone' or suburb which both had hundreds of unique categories. Creating so many unique variables for each category is impractical with one-hot encoding, so target encoding was deployed.
 
-
-**Missing Values 2 - Imputation**
+**Missing Values 2 - Imputation**  
 So that the training set will not have any influence on the test set, before performing imputations the dataset was split into the training and test sets. Imputations will be performed on the training set and those same values will be set on the test set. This ensures that the test set has not been given any additional information in the modelling process.
 
-**Impute the missing values in 'cost' with the median cost when grouped by restaurant 'type'**
+**Impute the missing values in 'cost' with the median cost when grouped by restaurant 'type'**  
 This should be far more accurate than just the median price of cost, as the prices will be considerably different for different restaurant types. For example, a 'Fine Dining' restaurant will be far more expensive than a 'Food Court'.
 
-**Create Features Log of Cost and Log of Votes**
+**Create Features Log of Cost and Log of Votes**  
 Now that there are no more missing values, these two features can be implemented into the training and test sets.
 The natural log of these two variables had a much more normal distribution than the original variables, and a higher correlation with the target variable. This is expected to result in improved modelling performance.
 
-**Correlation Heatmaps**
+**Correlation Heatmaps**  
 Correlation heatmaps show how each variable relates with another. Of particular interest are how the input variables correlate with the target variables. These contain the name 'rating_'. Heatmaps were used to determine which variables correlated strongest with the target variables and if there would be any potential issues of multicollinearity among input variables. 
 
-#### Part B II. Regression Modelling  
+### Part B II. Regression Modelling
 To recap, the rating number of the restaurant is a number ranging from 0 to 5. The median value of the Poor rating was 2.3, ranging up to the median value for the Excellent rating being 4.6.
 - The task was to build a linear regression model (model_regression_1) to predict the restaurants rating (numeric rating) from other features (columns) in the dataset.  
 - Build another linear regression model (model_regression_2) with using the Gradient Descent as the optimisation function.
@@ -188,7 +187,7 @@ Looking at the three metrics for the three models, the results are very similar.
 
 It would have to be concluded that all models are very similar but Linear Regression performs the best for this dataset. Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
 
-#### Part B III. Classification Modelling  
+### Part B III. Classification Modelling  
 Various models will be configured and run to classify the desired class of ratings as class 1 or class 2. Before commencing with the modelling, the dataset must be configured correctly. As is requested, earlier in the Feature Engineering section, the rating_text was used to create a new variable which is called rating_class. rating_class consists of two values:
 
 Class 1 contains ratings of 'Poor' and 'Average'.  
@@ -202,7 +201,7 @@ NOTE! As was done for the regression modelling, all variables containing the wor
 **Standardize the Dataset**  
 As was explained and done in the regression modelling, standardization will be applied, to give all variables equal weight in the modelling.
 
-#### Build the Classification Models.
+**Build the Classification Models**  
 Four classification models were built to predict the two ratings classes.  
 1. Classification Model 1 - Logistic Regression
 2. Classification Model 2 - Support Vector Machine
