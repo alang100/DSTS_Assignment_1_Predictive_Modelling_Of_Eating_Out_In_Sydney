@@ -103,6 +103,8 @@ Refer to the Jupyter notebook or the HTML file included in this repository for t
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
 
 ### I - Feature Engineering
+The feature engineering process involved several important steps to preapre the data optimally for modelling. These steps are briefly outlined here.
+
 **1. Data Cleaning and Handling Missing Values**  
 **Removal of Irrelevant Columns**  
 Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
