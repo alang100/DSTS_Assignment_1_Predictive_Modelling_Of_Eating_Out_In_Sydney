@@ -8,7 +8,7 @@ This project was coded using Python.
 
 This assignment's instructions and deliverables and a summary of the main outcomes are provided here:
 
-## Assignment Instructions and Deliverables
+## Project Instructions and Deliverables
 
 ### Part A – Importing and Understanding Data  
 **1 - Provide plots/graphs to support:**
