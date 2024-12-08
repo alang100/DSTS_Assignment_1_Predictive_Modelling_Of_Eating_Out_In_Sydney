@@ -81,7 +81,7 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
  f. The Link of the Docker image you have deployed on the Docker Hub.  
 
 --- 
-
+##  Brief Explanation of the Output and Results
 ## Part A: Exploratory Data Analysis
 Refer to the Jupyter notebook or the HTML file included in this repository for the code, outputs and charts produced for this project.
 
