@@ -108,7 +108,7 @@ C.
 ### Predictive Modelling
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
 
-### I - Feature Engineering
+### I. Feature Engineering
 The feature engineering process involved several important steps to preapre the data optimally for modelling. These steps are briefly outlined here.
 
 **Data Cleaning and Handling Missing Values**  
