@@ -1,12 +1,12 @@
-Predictive Modelling of Eating Out In Sydney
+# Predictive Modelling of Eating Out In Sydney
+
+This project was coded using Python.
+
+This project's objectives, instructions, deliverables, methodology and a summary of the main outcomes are provided below.
 
 Included in this repository are the following:
 1. DSTS Assignment 1 PDF file.
 2. DSTS Assignment 1 Jupyter Notebook. This will demonstrate the code and charts used in this project.
-
-This project was coded using Python.
-
-This project's instructions, deliverables and a summary of the main outcomes are provided here:
 
 ## Project Objectives
 I used a real word dataset on eating-out habits in Sydney. To this dataset I applied feature engineering, modelling and deployment knowledge 
@@ -16,7 +16,7 @@ to draw some conclusions, supported by code and graphs, built predictive models,
 This project consists of a real-world dataset containing more than 10K records for restaurants existing in the Sydney area in the year 2018. For every single record, information about the restaurant goes from basic details such as name, address, and location to advanced details such as rating. The objectives are to apply data science skills to predict the restaurant’s success using different machine learning algorithms.
 Table 1 shows the description of the variables in attached dataset.
 
-<img src="Table_1.png" alt="Table 1" width="600">
+<img src="Table_1.png" alt="Table 1" width="700">
 
 ## Project Instructions and Deliverables
 
@@ -33,7 +33,7 @@ Table 1 shows the description of the variables in attached dataset.
 
 **3 - Produce Cuisine Density Map:** Using the restaurant geographic information and the provided “sydney.geojson” file, write a python function to show a cuisine density map where each suburb is colour-coded by the number of restaurants that serve a particular cuisine. Use Geopandas.   
 
-**4 - Tableau Dashboard for quick insights:** Can you generate a Tableau dashboard that visualise some of the graphs/plots to answer some of the EDA questions above? Also, can you share this dashboard on the Tableau public?  
+**4 - Tableau Dashboard for quick insights:** Can you generate a Tableau dashboard that visualises some of the graphs/plots to answer some of the EDA questions above? Also, can you share this dashboard on the Tableau public?  
 
 ### Part B – Predictive Modelling
 In this part, you are expected to apply predictive modelling to predict/classify the success of the restaurants.  
@@ -80,9 +80,11 @@ You are required to submit a compressed (e.g. ZIP) file to the Canvas website of
  e. The Link of the source code you have deployed on the GitLab.
  f. The Link of the Docker image you have deployed on the Docker Hub.  
 
+--- 
+
 ## Project Summary and Main Outcomes
 
-### Key Steps:
+### Modelling:
 
 #### Data Cleaning and Preprocessing:
 - Removed unnecessary features (e.g., addresses, links, latitude/longitude) to simplify the dataset and prevent multicollinearity.
