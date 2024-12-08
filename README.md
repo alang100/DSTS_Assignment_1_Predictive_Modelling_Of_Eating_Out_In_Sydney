@@ -6,7 +6,7 @@ Included in this repository are the following:
 
 This project was coded using Python.
 
-This assignment's instructions and deliverables and a summary of the main outcomes are provided here:
+This project's instructions, deliverables and a summary of the main outcomes are provided here:
 
 ## Project Objectives
 I used a real word dataset on eating-out habits in Sydney. To this dataset I applied feature engineering, modelling and deployment knowledge 
