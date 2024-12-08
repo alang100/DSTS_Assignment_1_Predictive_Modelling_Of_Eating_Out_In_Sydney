@@ -102,7 +102,7 @@ Refer to the Jupyter notebook or the HTML file included in this repository for t
 ### Predictive Modelling
 Before the predictive modelling could begin, several feature engineering techniques were applied to the dataset, to ensure the data was prepared optimially for the modelling.
 
-### Part B I - Feature Engineering
+### I - Feature Engineering
 **1. Data Cleaning and Handling Missing Values**  
 **Removal of Irrelevant Columns**  
 Before proceeding with encoding and dealing with missing values, it was prudent to examine all the features and determine using domain knowledge and experience if they should be used in the modelling process. All the features were analyzed and those that are irrelevant or would have had no significant impact on the modelling were removed.
@@ -157,7 +157,7 @@ The natural log of these two variables had a much more normal distribution than 
 **Correlation Heatmaps**  
 Correlation heatmaps show how each variable relates with another. Of particular interest are how the input variables correlate with the target variables. These contain the name 'rating_'. Heatmaps were used to determine which variables correlated strongest with the target variables and if there would be any potential issues of multicollinearity among input variables. 
 
-### Part B II. Regression Modelling
+### II. Regression Modelling
 To recap, the rating number of the restaurant is a number ranging from 0 to 5. The median value of the Poor rating was 2.3, ranging up to the median value for the Excellent rating being 4.6.
 - The task was to build a linear regression model (model_regression_1) to predict the restaurants rating (numeric rating) from other features (columns) in the dataset.  
 - Build another linear regression model (model_regression_2) with using the Gradient Descent as the optimisation function.
@@ -187,7 +187,7 @@ Looking at the three metrics for the three models, the results are very similar.
 
 It would have to be concluded that all models are very similar but Linear Regression performs the best for this dataset. Regression models were effective for numeric predictions but showed room for improvement in handling rating variance.
 
-### Part B III. Classification Modelling  
+### III. Classification Modelling  
 Various models will be configured and run to classify the desired class of ratings as class 1 or class 2. Before commencing with the modelling, the dataset must be configured correctly. As is requested, earlier in the Feature Engineering section, the rating_text was used to create a new variable which is called rating_class. rating_class consists of two values:
 
 Class 1 contains ratings of 'Poor' and 'Average'.  
