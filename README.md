@@ -8,6 +8,7 @@ Included in this repository are the following:
 3. [Project_Output_HTML](Modelling_Of_Eating_Out_In_Sydney.html). The code and output is also provided in HTML format for easier viewing access.
 4. The link to the [Tableau Dashboard](https://public.tableau.com/app/profile/alan.gaugler/viz/DSTS_Ast1/Suburbs?publish=yes). "Dashboard1" is the main tab, but several other tables and charts were made.
 
+---
 
 ## Project Objectives
 This project used a real word dataset on eating-out habits in Sydney. To this dataset, I applied feature engineering, modelling and deployment knowledge to draw some conclusions, supported by code and graphs, built predictive models, and deployed the work on a public repository.
