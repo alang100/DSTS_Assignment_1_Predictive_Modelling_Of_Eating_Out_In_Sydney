@@ -2,7 +2,7 @@
 
 This project's objectives, instructions, deliverables, methodology and a summary of the main outcomes are provided below.
 
-Included in this repository are the following:
+Included in this repository are the following files:
 1. The [Summary_Of_Deliverables_Sydney_Restaurants](Summary_Of_Deliverables_Sydney_Restaurants.pdf)
 2. [Project Jupyter Notebook](Modelling_Of_Eating_Out_In_Sydney.ipynb). This will demonstrate the code, output, charts and modelling outcomes of this project.
 3. [Project_Output_HTML](Modelling_Of_Eating_Out_In_Sydney.html). The code and output is also provided in HTML format for easier viewing access.
